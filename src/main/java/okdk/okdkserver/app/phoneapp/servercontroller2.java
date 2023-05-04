@@ -20,7 +20,7 @@ import java.util.UUID;
 public class servercontroller2{
 
     @PostMapping(value = "/server/register",consumes = {MediaType.APPLICATION_JSON_VALUE, MediaType.MULTIPART_FORM_DATA_VALUE})
-    public String registerImage(@RequestParam MultipartFile imgFile) throws IOException {
+    public String registerImage(@RequestParam("image") MultipartFile imgFile) throws IOException {
         System.out.println(imgFile);
         String result = null;
         if (!imgFile.isEmpty()) {
